@@ -90,7 +90,7 @@ const addPost = (id, vu) =>{
     markAsYouReadContainer.appendChild(addedPost);
 }
 
-//online offline
+
 
 
 // ------------------------------------------ Latest Post Functionalities---------------------------------------------------//
