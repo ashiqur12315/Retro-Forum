@@ -17,7 +17,7 @@ const displayPost = posts =>{
         const postCard = document.createElement('div');
         postCard.classList = `bg-[#12132d0d]  rounded-3xl`;
         postCard.innerHTML = `<div class="p-10 flex gap-x-6">
-        <div class="avatar online w-20 h-20">
+        <div id="onOff" class="avatar w-20 h-20">
             <div class="w-24 rounded-2xl">
               <img src="${post.image}" />
             </div>
@@ -53,7 +53,13 @@ const displayPost = posts =>{
             </div>
         </div>
     </div>`;
-    postContainer.appendChild(postCard);            
+    
+    postContainer.appendChild(postCard);
+    const onoff =document.getElementById('onOff');
+    if (post.isActive){
+        
+        onoff.classList.add('online');
+    }          
     })
 }
 
@@ -83,6 +89,8 @@ const addPost = (id, vu) =>{
     
     markAsYouReadContainer.appendChild(addedPost);
 }
+
+//online offline
 
 
 // ------------------------------------------ Latest Post Functionalities---------------------------------------------------//
