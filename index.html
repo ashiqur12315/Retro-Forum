@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Forum</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Daisy UI and Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f8c5331c10.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-[#FFF]">
+    <!-- Header section -->
+    <header class="container mx-auto">
+        <!-- Navbar -->
+        <div class="navbar bg-base-100 mt-6 mb-14 ">
+            <div class="flex-1">
+              <a class="btn btn-ghost"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="flex-none gap-3">
+              <div class="dropdown dropdown-end border-[#0307121a] rounded-full border-2 tooltip" data-tip="Home">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                  <div class="w-10 rounded-full border-black max-w-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2.25 12.0001L11.204 3.04507C11.644 2.60607 12.356 2.60607 12.795 3.04507L21.75 12.0001M4.5 9.75007V19.8751C4.5 20.4961 5.004 21.0001 5.625 21.0001H9.75V16.1251C9.75 15.5041 10.254 15.0001 10.875 15.0001H13.125C13.746 15.0001 14.25 15.5041 14.25 16.1251V21.0001H18.375C18.996 21.0001 19.5 20.4961 19.5 19.8751V9.75007M8.25 21.0001H16.5" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown dropdown-end border-[#0307121a] rounded-full border-2 tooltip" data-tip="Tooltip">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle ">
+                  <div class="w-10 rounded-full border-black max-w-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M16.862 4.487L18.549 2.799C18.9007 2.44733 19.3777 2.24976 19.875 2.24976C20.3723 2.24976 20.8493 2.44733 21.201 2.799C21.5527 3.15068 21.7502 3.62766 21.7502 4.125C21.7502 4.62235 21.5527 5.09933 21.201 5.451L6.832 19.82C6.30332 20.3484 5.65137 20.7367 4.935 20.95L2.25 21.75L3.05 19.065C3.26328 18.3486 3.65163 17.6967 4.18 17.168L16.863 4.487H16.862ZM16.862 4.487L19.5 7.125" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown dropdown-end border-[#0307121a] rounded-full border-2 tooltip" data-tip="Add">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle ">
+                  <div class="w-10 rounded-full border-black max-w-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 7.5V10.5M18 10.5V13.5M18 10.5H21M18 10.5H15M12.75 6.375C12.75 7.27011 12.3944 8.12855 11.7615 8.76149C11.1285 9.39442 10.2701 9.75 9.375 9.75C8.47989 9.75 7.62145 9.39442 6.98851 8.76149C6.35558 8.12855 6 7.27011 6 6.375C6 5.47989 6.35558 4.62145 6.98851 3.98851C7.62145 3.35558 8.47989 3 9.375 3C10.2701 3 11.1285 3.35558 11.7615 3.98851C12.3944 4.62145 12.75 5.47989 12.75 6.375ZM3 19.235V19.125C3 17.4342 3.67165 15.8127 4.86719 14.6172C6.06274 13.4216 7.68424 12.75 9.375 12.75C11.0658 12.75 12.6873 13.4216 13.8828 14.6172C15.0784 15.8127 15.75 17.4342 15.75 19.125V19.234C13.8255 20.3931 11.6206 21.0038 9.374 21C7.043 21 4.862 20.355 3 19.234V19.235Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown dropdown-end border-[#0307121a] rounded-full border-2 tooltip" data-tip="Flag">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle ">
+                  <div class="w-10 rounded-full border-black max-w-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 3V4.5M3 4.5L5.77 3.807C7.8544 3.28605 10.0564 3.52795 11.978 4.489L12.086 4.543C13.9688 5.4843 16.1219 5.73589 18.171 5.254L21.281 4.522C20.9029 8.01155 20.9046 11.5318 21.286 15.021L18.172 15.753C16.1227 16.2354 13.9692 15.9842 12.086 15.043L11.978 14.989C10.0564 14.028 7.8544 13.786 5.77 14.307L3 15M3 4.5V15M3 21V15" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-primary bg-[#797DFC] border-none rounded-3xl px-9 py-4"><span class="text-[20px] font-bold text-white">Sign In</span></button>
+              </div>
+            </div>
+        </div>
+        <!-- Banner -->
+        <div class="hero rounded-3xl bg-[#12132D] pt-24 pb-24 mb-24" style="background-image: url(images/bgbanner.png);">
+              <div class="max-w-full flex justify-center items-center">
+                <div class="w-1/2">
+                    <h2 class="text-white text-[64px] font-extrabold">Welcome to the <span class="text-[#797dfc]">ReTro</span> Forum</h2>
+                    <h3 class="text-[20px] font-medium text-[#ffffffcc] mt-5">Share your favorite opinion and win and wp <br> forum coffee mug!</h3>
+                    <!-- search container -->
+                    <div class="bg-white flex justify-between max-w-96 rounded-full p-1 mt-8">
+                        <input id="search-field" type="text" placeholder="Search here anything" class="input w-full max-w-xs border-none focus:outline-none rounded-full" />
+                        <button onclick="searchHandler()" class="btn btn-active text-white text-[20px] font-bold border-none rounded-[46px] px-6 bg-[#797DFC]">Search</button>
+                    </div>
+                </div>
+                <div class="w-1/2 flex justify-center items-center">
+                    <div class="bg-white p-12 rounded-3xl text-2xl font-medium space-y-6">
+                        <p>Registered Users    <span class="ml-14">01</span></p>
+                        <p>Forum    <span class="float-end">05</span></p>
+                        <p>Topics    <span class="float-end">01</span></p>
+                        <p>Replies    <span class="float-end">01</span></p>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+        
+    </header>
+
+    <!-- Main Section -->
+    <main class="container mx-auto">
+        <!-- Lets Discuss -->
+        <div class="text-center">
+            <h2 class="text-[40px] font-extrabold">Let’s Discuss</h2>
+            <p class="text-[18px] font-normal mt-6 mb-11">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+        </div>
+        
+        <section class="flex gap-x-6">
+            <!-- posts -->
+            <div id="post-container" class="w-4/6  rounded-3xl space-y-5">
+                <div class="bg-[#12132d0d]  rounded-3xl ">
+                    <!-- <div class="p-10 flex gap-x-6">
+                        <div class="avatar online w-20 h-20">
+                            <div class="w-24 rounded-2xl">
+                              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            </div>
+                          </div>
+                        <div class="w-full">
+                            
+                            <div class="flex gap-5 text-[14px] font-medium mb-3">
+                                <p># <span>Music</span></p>
+                                <p>Author : <span>Awlad Hossain</span></p>
+                            </div>
+                            
+                            <div class="mb-5">
+                                <h2 class="text-[20px] font-bold mb-4">10 Kids Unaware of Their Halloween Costume</h2>
+                                <p class="text-[#12132d99] text-[16px] font-normal">It’s one thing to subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p>
+                            </div>
+                            <hr class="w-full divide-dotted">
+                            <div class="text-[#12132d99] mt-5">
+                                <i class="fa-regular fa-message">560</i>
+                                <i class="fa-regular fa-eye">1,568</i>
+                                <i class="fa-regular fa-clock">5 min</i>
+                                <button onclick="addPost('${post.title}')" class="float-end">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                        <g clip-path="url(#clip0_57_425)">
+                                          <path d="M13.9998 0C6.26805 0 9.15527e-05 6.26814 9.15527e-05 13.9999C9.15527e-05 21.7314 6.26805 28 13.9998 28C21.7315 28 27.9999 21.7314 27.9999 13.9999C27.9999 6.26814 21.7315 0 13.9998 0ZM14 4.91741L22.2847 10.0835H5.71542L14 4.91741ZM22.3879 18.333H22.3871C22.3871 19.1616 21.7155 19.8331 20.887 19.8331H7.1131C6.28447 19.8331 5.61303 19.1615 5.61303 18.333V10.4122C5.61303 10.3245 5.62199 10.2393 5.63655 10.1556L13.552 15.0914C13.5617 15.0975 13.5721 15.1016 13.5821 15.1072C13.5925 15.113 13.6032 15.1186 13.6138 15.1239C13.6697 15.1527 13.7273 15.176 13.7862 15.1912C13.7923 15.1929 13.7983 15.1936 13.8044 15.195C13.869 15.2102 13.9344 15.2197 13.9998 15.2197H14.0002C14.0007 15.2197 14.0012 15.2197 14.0012 15.2197C14.0665 15.2197 14.1319 15.2105 14.1965 15.195C14.2026 15.1935 14.2086 15.1929 14.2147 15.1912C14.2735 15.176 14.3309 15.1527 14.3871 15.1239C14.3977 15.1186 14.4084 15.113 14.4188 15.1072C14.4287 15.1016 14.4392 15.0975 14.4489 15.0914L22.3644 10.1556C22.3789 10.2393 22.3879 10.3244 22.3879 10.4122V18.333Z" fill="#10B981"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_57_425">
+                                            <rect width="28" height="28" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- Title Mark as Read -->
+            <div class="w-2/6 p-6 bg-[#12132d0d] rounded-3xl">
+                <div class="flex justify-between mb-5">
+                    <div><h2 class="text-[20px] font-bold">Title</h2></div>
+                    <div class="flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_30_2429)">
+                              <path d="M7 12L12 17L22 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M2 12L7 17M12 12L17 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_30_2429">
+                                <rect width="24" height="24" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        <p class="text-[16px] font-normal text-[#12132d99]">Mark as read (<span id="count">0</span>)</p></div>
+                </div>
+                <!-- Add elements here by clicking -->
+                <div id="mark-as-you-read-container" class="bg-white rounded-2xl">
+                    <!-- add koro -->
+                    <!-- <div class="flex justify-between p-4">
+                        <div><h2 class="">10 Kids Unaware of Their Halloween Costume</h2></div>
+                        <div><i class="fa-regular fa-eye">1,568</i></div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Join Our Forum section -->
+        <section class="mt-24 mb-24">
+            <div class="hero p-24 bg-[#12132D] rounded-3xl">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <img src="images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
+                  <div>
+                    <h1 class="text-white text-[40px] font-extrabold">Join Our Forum</h1>
+                    <p class="py-8 text-[#ffffffcc] text-[18px] font-normal">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
+                    <button class="btn btn-primary px-10 text-[20px] font-bold rounded-full">Registered Now</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+        <!-- Latest Post section -->
+        <section class="mb-24">
+            <div class="text-center mb-11">
+                <h2 class="text-[40px] font-extrabold">Latest Posts</h2>
+                <p class="text-[#12132d99] text-[18px] font-normal">Yes, you can run unit tests and view the results directly within the app. The <br>integrated testing features allow for a streamlined .</p>
+            </div>
+
+            <div id="latest-post" class="grid grid-cols-3 gap-6 ">
+                <!-- 1st latest post -->
+                <!-- <div class="card card-compact w-96 bg-base-100 shadow-xl border"> -->
+                    <!-- <figure id="cover-image"  class="border mt-6 ml-6 mr-6"> </figure>
+                    <div class="card-body">
+                        <div class="flex justify-center items-center gap-2">
+                            <img src="images/calender.jpg" alt="">
+                            <p id="posted-date" class="text-[#12132d99] text-[16px] font-normal"></p>
+                        </div>
+                        <h2 id="title" class="card-title text-[18px] font-extrabold"></h2>
+                        <p id="description" class="text-[16px] font-normal text-[#12132d99] mt-2 mb-4"></p>
+                        <div class="flex gap-2">
+                            <div ><img src="images/calender.jpg" alt=""></div>
+                            <div>
+                                <p id="name" class="text-[16px] font-bold">Cameron Williamson</p>
+                                <p id="designation" class="text-[#12132d99] text-[14px] font-normal">Unknown</p>
+                            </div>
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- 2nd latest post -->
+                  <!-- <div class="card card-compact w-96 bg-base-100 shadow-xl border">
+                    <figure class="border mt-6 ml-6 mr-6"><img src="images/joinforum.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <div class="flex justify-center items-center gap-2">
+                            <img src="images/calender.jpg" alt="">
+                            <p class="text-[#12132d99] text-[16px] font-normal">29 January 2024</p>
+                        </div>
+                        <h2 class="card-title text-[18px] font-extrabold">What will a mars habitat force that impact in our daily life!!!</h2>
+                        <p class="text-[16px] font-normal text-[#12132d99] mt-2 mb-4">Yes, you can run unit tests and view the results directly within the app. </p>
+                        <div class="flex gap-2">
+                            <div><img src="images/calender.jpg" alt=""></div>
+                            <div>
+                                <p class="text-[16px] font-bold">Cameron Williamson</p>
+                                <p class="text-[#12132d99] text-[14px] font-normal">Unknown</p>
+                            </div>
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- 3rd latest post -->
+                  <!-- <div class="card card-compact w-96 bg-base-100 shadow-xl border">
+                    <figure class="border mt-6 ml-6 mr-6"><img src="images/joinforum.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <div class="flex justify-center items-center gap-2">
+                            <img src="images/calender.jpg" alt="">
+                            <p class="text-[#12132d99] text-[16px] font-normal">29 January 2024</p>
+                        </div>
+                        <h2 class="card-title text-[18px] font-extrabold">What will a mars habitat force that impact in our daily life!!!</h2>
+                        <p class="text-[16px] font-normal text-[#12132d99] mt-2 mb-4">Yes, you can run unit tests and view the results directly within the app. </p>
+                        <div class="flex gap-2">
+                            <div><img src="images/calender.jpg" alt=""></div>
+                            <div>
+                                <p class="text-[16px] font-bold">Cameron Williamson</p>
+                                <p class="text-[#12132d99] text-[14px] font-normal">Unknown</p>
+                            </div>
+                      </div>
+                    </div>
+                  </div> -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+        <h2 class="text-4xl font-extrabold">ReTro</h2>
+        <p class="text-[#12132db3] text-[16px] font-normal">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br>piece of classical Latin literature from 45 BC</p>
+        
+        <nav>
+          <div class="grid grid-flow-col gap-4">
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+            <a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href=""><i class="fa-brands fa-github fa-2x"></i></a>
+          </div>
+          
+        </nav>
+        <hr class="w-full"> 
+        <aside>
+          <p class="text-[#12132d80] text-[16px]">2024, All Rights Reserved.</p>
+        </aside>
+      </footer>
+
+      <script src="app.js"></script>
+    
+</body>
+</html>
