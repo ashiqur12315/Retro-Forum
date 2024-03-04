@@ -59,6 +59,7 @@ const displayPost = posts =>{
 
 // Search Handler
 const searchHandler = () => {
+    
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     console.log(searchText);
@@ -78,7 +79,7 @@ const addPost = (id, vu) =>{
     const addedPost = document.createElement('div');
     addedPost.classList =`flex justify-between p-4`;
     addedPost.innerHTML = `<div><h2 class="text-[16px] font-semibold">${id}</h2></div>
-                            <div><i class="fa-regular fa-eye">${vu}</i></div>`;
+                            <div><i class="fa-regular fa-eye"><span class="ml-3">${vu}</span></i></div>`;
     
     markAsYouReadContainer.appendChild(addedPost);
 }
@@ -113,7 +114,7 @@ const loadLatestPost = async() => {
             <h2 id="title" class="card-title text-[18px] font-extrabold">${latestPosts[n].title}</h2>
             <p id="description" class="text-[16px] font-normal text-[#12132d99] mt-2 mb-4">${latestPosts[n].description}</p>
             <div class="flex gap-2">
-                <div class="w-11 rounded-full"><img src="${latestPosts[n].profile_image}" alt=""></div>
+                <div class="w-11"><img class="rounded-full" src="${latestPosts[n].profile_image}" alt=""></div>
                 <div>
                     <p id="name" class="text-[16px] font-bold">${latestPosts[n].author.name}</p>
                     <p id="designation" class="text-[#12132d99] text-[14px] font-normal">${latestPosts[n].author.designation || 'Unknown'}</p>
