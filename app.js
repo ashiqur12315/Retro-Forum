@@ -8,6 +8,7 @@ const loadPost = async(searchText) => {
 }
 
 
+
 const displayPost = posts =>{
     const postContainer = document.getElementById('post-container');
     postContainer.textContent = '';
