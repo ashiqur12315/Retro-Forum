@@ -34,10 +34,10 @@ const displayPost = posts =>{
                 <p class="text-[#12132d99] text-[16px] font-normal">${post.description}</p>
             </div>
             <hr class="w-full divide-dotted">
-            <div class="text-[#12132d99] mt-5">
-                <i class="fa-regular fa-message">${post.comment_count}</i>
-                <i class="fa-regular fa-eye">${post.view_count}</i>
-                <i class="fa-regular fa-clock">${post.posted_time}</i>
+            <div class="text-[#12132d99] mt-5 space-x-6">
+                <i class="fa-regular fa-message"><span class="ml-3">${post.comment_count}</span></i>
+                <i class="fa-regular fa-eye"><span class="ml-3">${post.view_count}</span></i>
+                <i class="fa-regular fa-clock"><span class="ml-3">${post.posted_time} min</span></i>
                 <button onclick="addPost('${post.title}','${post.view_count}')" class="float-end">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                         <g clip-path="url(#clip0_57_425)">
